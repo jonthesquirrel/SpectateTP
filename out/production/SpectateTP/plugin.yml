@@ -1,0 +1,9 @@
+main: io.github.lasercar.spectatetp.SpectateTP
+author: Lasercar7
+website: https://github.com/lasercar/SpectateTP
+name: SpectateTP
+version: 1.0
+description: "Prevents teleporting with spectator mode without permission."
+permissions:
+  spectatetp.tp:
+    description: Allows player to teleport with spectator mode.

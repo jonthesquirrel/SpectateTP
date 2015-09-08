@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SpectateTP:jar">
+    <output-path>$PROJECT_DIR$/../../server/SpectateTP/plugins</output-path>
+    <root id="archive" name="SpectateTP.jar">
+      <element id="module-output" name="SpectateTP" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../server/SpectateTP/bukkit.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
