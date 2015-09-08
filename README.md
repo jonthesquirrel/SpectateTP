@@ -7,3 +7,5 @@ Players can normally use spectator mode to teleport to anyone without permission
 This plugin prevents players from teleporting with spectator mode, unless they have the permission: ```spectatetp.tp```
 
 The message players receive if they are denied can be changed in the config.
+
+**[Downloads (1.8)](https://github.com/lasercar/SpectateTP/releases) | [Spigot forum thread](https://www.spigotmc.org/resources/spectatetp.12003)**
