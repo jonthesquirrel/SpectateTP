@@ -18,12 +18,13 @@ public final class SpectateTP extends JavaPlugin implements Listener {
         return ChatColor.translateAlternateColorCodes('&', string);
     }
 
+    public String deny_message = colorize(this.getConfig().getString("deny-message"));
+
     @EventHandler
     public void onTp(PlayerTeleportEvent event) {
 
         Player player = event.getPlayer();
         PlayerTeleportEvent.TeleportCause cause = event.getCause();
-        String deny_message = colorize(this.getConfig().getString("deny-message"));
 
         if (cause.toString().equals("SPECTATE")) {
             if (!player.hasPermission("spectatetp.tp")) {
