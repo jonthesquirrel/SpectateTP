@@ -1,2 +1,2 @@
-# Players require spectatetp.tp permission to teleport with spectator mode.
-deny-message: "&cSorry, you don't have permission to teleport with spectator mode."
+# permission spectate.tp is required to teleport using spectator mode.
+deny-message: "&cYou don't have permission."

@@ -27,7 +27,7 @@ public final class SpectateTP extends JavaPlugin implements Listener {
         PlayerTeleportEvent.TeleportCause cause = event.getCause();
 
         if (cause.toString().equals("SPECTATE")) {
-            if (!player.hasPermission("spectatetp.tp")) {
+            if (!player.hasPermission("spectate.tp")) {
                 event.setCancelled(true);
                 if (!deny_message.equals("")) {
                     player.sendMessage(deny_message);
