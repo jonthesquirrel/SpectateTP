@@ -5,5 +5,13 @@ name: SpectateTP
 version: 1.2.0
 description: Requires permission to teleport using spectator mode.
 permissions:
-  spectate.tp:
+  spectatetp.tp:
     description: Allows player to teleport using spectator mode.
+  spectatetp.reload:
+    description: Allows player to reload the config file.
+commands:
+  spectatetp-reload:
+    description: Reloads the config file.
+    usage: "/spectatetp-reload"
+    permission: spectatetp.reload
+    permission-message: "[SpectateTP] §cYou don't have permission to reload the config file."

@@ -1,6 +1,8 @@
 package io.github.lasercar.spectatetp;
 
 import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,8 +14,7 @@ public final class SpectateTP extends JavaPlugin implements Listener {
     public String deny_message;
 
     public void onEnable() {
-        initConfig();
-        loadConfig();
+        configInit();
         getServer().getPluginManager().registerEvents(this, this);
     }
 
@@ -21,14 +22,16 @@ public final class SpectateTP extends JavaPlugin implements Listener {
         return ChatColor.translateAlternateColorCodes('&', string);
     }
 
-    public void initConfig() {
-        this.getConfig().addDefault("deny-message", "&cYou don't have permission.");
+    public void configInit() {
+        this.getConfig().addDefault("deny-message", "&cYou don't have permission to teleport using spectate.");
         this.getConfig().options().copyDefaults(true);
-    }
-
-    public void loadConfig() {
         saveConfig();
         deny_message = colorize(this.getConfig().getString("deny-message"));
+    }
+
+    public void configReload() {
+        this.reloadConfig();
+        configInit();
     }
 
     @EventHandler
@@ -38,7 +41,7 @@ public final class SpectateTP extends JavaPlugin implements Listener {
         PlayerTeleportEvent.TeleportCause cause = event.getCause();
 
         if (cause.toString().equals("SPECTATE")) {
-            if (!player.hasPermission("spectate.tp")) {
+            if (!player.hasPermission("spectatetp.tp")) {
                 event.setCancelled(true);
                 if (!deny_message.equals("")) {
                     player.sendMessage(deny_message);
@@ -46,6 +49,17 @@ public final class SpectateTP extends JavaPlugin implements Listener {
             }
         }
 
+    }
+
+    @EventHandler
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+
+        if (label.equalsIgnoreCase("spectatetp-reload")) {
+            configReload();
+            sender.sendMessage("[SpectateTP] §aconfig reloaded!");
+        }
+
+        return true;
     }
 
 }
