@@ -9,8 +9,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SpectateTP extends JavaPlugin implements Listener {
 
+    public String deny_message;
+
     public void onEnable() {
-        saveDefaultConfig();
+        initConfig();
+        loadConfig();
         getServer().getPluginManager().registerEvents(this, this);
     }
 
@@ -18,7 +21,15 @@ public final class SpectateTP extends JavaPlugin implements Listener {
         return ChatColor.translateAlternateColorCodes('&', string);
     }
 
-    public String deny_message = colorize(this.getConfig().getString("deny-message"));
+    public void initConfig() {
+        this.getConfig().addDefault("deny-message", "&cYou don't have permission.");
+        this.getConfig().options().copyDefaults(true);
+    }
+
+    public void loadConfig() {
+        saveConfig();
+        deny_message = colorize(this.getConfig().getString("deny-message"));
+    }
 
     @EventHandler
     public void onTp(PlayerTeleportEvent event) {
