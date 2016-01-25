@@ -20,6 +20,7 @@ Known issues:
 - Some spigot versions cause `PlayerTeleportEvent.TeleportCause` to return `UNKNOWN` when it should return `SPECTATE`, causing the teleport blocking to not work. If this happens, update to the latest spigot jar.
 
 Changelog:
+
 `1.1`
 - built jar properly to reduce size dramatically
 
