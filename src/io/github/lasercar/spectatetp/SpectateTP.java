@@ -29,7 +29,9 @@ public final class SpectateTP extends JavaPlugin implements Listener {
         if (cause.toString().equals("SPECTATE")) {
             if (!player.hasPermission("spectatetp.tp")) {
                 event.setCancelled(true);
-                player.sendMessage(deny_message);
+                if (!deny_message.equals("")) {
+                    player.sendMessage(deny_message);
+                }
             }
         }
 
