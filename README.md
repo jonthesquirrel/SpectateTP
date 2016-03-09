@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/lasercar/SpectateTP.png?label=ready&title=Ready)](https://waffle.io/lasercar/SpectateTP)
 # SpectateTP
 
 This is a simple plugin to solve a simple problem.
