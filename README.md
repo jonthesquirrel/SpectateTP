@@ -1,6 +1,8 @@
 [![Stories in Ready](https://badge.waffle.io/lasercar/SpectateTP.png?label=ready&title=Ready)](https://waffle.io/lasercar/SpectateTP)
 # SpectateTP
 
+[![Join the chat at https://gitter.im/lasercar/SpectateTP](https://badges.gitter.im/lasercar/SpectateTP.svg)](https://gitter.im/lasercar/SpectateTP?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is a simple plugin to solve a simple problem.
 
 Players can normally use spectator mode to teleport to anyone without permission (using the number keys). However, spectator mode can be useful, so disabling it shouldn't be the only option.
