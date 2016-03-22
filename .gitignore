@@ -1,6 +1,2 @@
-.idea/*
-!.idea/misc.xml
-.idea/artifacts/*
-!.idea/artifacts
-!.idea/artifacts/SpectateTP_jar.xml
+.idea
 out
