@@ -51,7 +51,7 @@ public final class SpectateTP extends JavaPlugin implements Listener {
 
     }
 
-    @EventHandler
+    @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         if (label.equalsIgnoreCase("spectatetp-reload")) {
