@@ -2,7 +2,7 @@ main: io.github.lasercar.spectatetp.SpectateTP
 author: Lasercar7
 website: https://github.com/lasercar/SpectateTP
 name: SpectateTP
-version: 1.2.0
+version: 1.2.1
 description: Requires permission to teleport using spectator mode.
 permissions:
   spectatetp.tp:
